@@ -9,16 +9,16 @@ function addWihMultiply(a, b, c) {
 }
 
 ```
-## Exporting & Importing Modules
+## Exporting & Importing Modules as per CommonJS Format
 
-### Single function 'add' as per CommonJS Format
+### Single function 'add' 
 ```
 module.exports =  add;
 
 const add = require("./functions/add");
 ```
 
-### Multiple functions as per CommonJS Format. You have option to rename function while exporting.
+### You have option to rename function while exporting multiple functions .
 ```
 module.exports = {
    add: add,
@@ -29,7 +29,7 @@ const {add, addMultiply} = require("./functions/add");
 
 ```
 
-### Multiple functions using shortcut way if your want to keep similar name as per actual function names using CommonJS Format
+### Shortcut way as per actual function names for multiple functions 
 ```
 module.exports = {
   add,
