@@ -1,6 +1,6 @@
-Exporting and Importing Modules as per Common-JS Module Format
+# Exporting and Importing Modules as per Common-JS Module Format
 
-` Exporting single funtion 'add' as per CommonJS Format `
+### Exporting single funtion 'add' as per CommonJS Format
 ```
 function add(a, b) {
     return a + b;
@@ -9,12 +9,12 @@ function add(a, b) {
 module.exports =  add;
 ```
 
-`Importing single module using common-js format`
+### Importing single module using common-js format
 ```
 const add = require("./functions/add");
 ```
 
-`Exporting multiple functions as per CommonJS Format. You have option to rename function while exporting.`
+### Exporting multiple functions as per CommonJS Format. You have option to rename function while exporting.
 ```
 function add(a, b) {
     return a + b;
@@ -28,3 +28,4 @@ module.exports = {
    add: add,
    addMultiply: addWihMultiply
 }
+```
