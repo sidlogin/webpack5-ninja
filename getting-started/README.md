@@ -21,3 +21,20 @@ module.exports = {
     }
 }
 ```
+Webpack internally use Immediate Invoke Function and wrap all code inside it, with below code after page load it immediately invoke the function and look for the 'button1' element and attach click event to it.
+```
+(() => {
+    document.getElementById("button1").addEventListener("click", function () {
+        const el = document.getElementById("header");
+        el.innerHTML = "Hey i have updated the code !";
+
+        const listItems = ["Apple", "Orange", "Banana"];
+        const ul = document.getElementById("shoppingList");
+        _.forEach(listItems, function (item) {
+            const tempEl = document.createElement("li");
+            tempEl.innerHTML = item;
+            ul.appendChild(tempEl);
+        });
+    });
+})()
+```
