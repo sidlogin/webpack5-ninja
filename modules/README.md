@@ -1,4 +1,4 @@
-# Exporting and Importing Modules as per ES6 Format
+# Exporting and Importing Modules as per CommonJS Format vs ES6 Format
 ```
 function add(a, b) {
     return a + b;
@@ -9,29 +9,12 @@ function subtract(a, b) {
 }
 
 ```
-## Exporting & Importing Modules as per ES6 Format
 
-### Single function 'add' 
-```
-export default add;
+### This whole module helps to learn exporting and importing concepts of methods/functions/modules as CommonJS and ES6 Format. We have exported/imported above two functions as per CommonJS Format and ES6 Format.
 
-import add from "./functions/add";
-const output1 = add(1, 2);
-```
-
-### Exporting multiple functions.
-```
-export { add, subtract };
-
-import {add, subtract} from "./functions";
-const output1 = add(1, 2);
-```
-
-### Import modules using alias 
-```
-export { add, subtract };
-
-import * as $ from "./functions";
-const output1 = $.add(1, 2);
-
+- How we Export/Import single modules
+- How we Export/Import multiple modules
+- How we use Alias while importing modules
+- How we rename modules while exporting 
+- How webpack helpful to execute ES6 Importing/Exporting using bundle.js 
 ```

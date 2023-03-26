@@ -1,41 +1,37 @@
-# Exporting and Importing Modules as per Common-JS Module Format
+# Exporting and Importing Modules as per ES6 Format
 ```
 function add(a, b) {
     return a + b;
 }
 
-function addWihMultiply(a, b, c) {
-  return (a + b) * c;
+function subtract(a, b) {
+  return (a - b);
 }
 
 ```
-## Exporting & Importing Modules as per CommonJS Format
+## Exporting & Importing Modules as per ES6 Format
 
 ### Single function 'add' 
 ```
-module.exports =  add;
+export default add;
 
-const add = require("./functions/add");
+import add from "./functions/add";
+const output1 = add(1, 2);
 ```
 
-### You have option to rename function while exporting multiple functions .
+### Exporting multiple functions.
 ```
-module.exports = {
-   add: add,
-   addMultiply: addWihMultiply
-}
+export { add, subtract };
 
-const {add, addMultiply} = require("./functions/add");
-
+import {add, subtract} from "./functions";
+const output1 = add(1, 2);
 ```
 
-### Shortcut way as per actual function names for multiple functions 
+### Import modules using alias 
 ```
-module.exports = {
-  add,
-  addWihMultiply
-}
+export { add, subtract };
 
-const {add, addWihMultiply} = require("./functions/add");
+import * as $ from "./functions";
+const output1 = $.add(1, 2);
 
 ```
