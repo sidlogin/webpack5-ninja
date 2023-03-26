@@ -16,7 +16,9 @@ function subtract(a, b) {
 export default add;
 
 import add from "./functions/add";
+
 const output1 = add(1, 2);
+console.log(output1);
 ```
 
 ### Exporting multiple functions.
@@ -24,7 +26,9 @@ const output1 = add(1, 2);
 export { add, subtract };
 
 import {add, subtract} from "./functions";
+
 const output1 = add(1, 2);
+console.log(output1);
 ```
 
 ### Import modules using alias 
@@ -32,6 +36,8 @@ const output1 = add(1, 2);
 export { add, subtract };
 
 import * as $ from "./functions";
+
 const output1 = $.add(1, 2);
+console.log(output1);
 
 ```
