@@ -97,7 +97,7 @@ module.exports = {
 Global CSS can import and apply in any files
 
 ```
-## Adding global CSS
+## Adding global CSS class in index.css
 :global(.border) {
     border: 2px solid #000;
 }
@@ -109,6 +109,6 @@ import style from "./index.css";
 btn1.classList.add(["border"]);
 
 import style from  "./clearButton.css";
-el.classList.add([style.button]);
+el.classList.add(["border"]);
 
 ```
