@@ -2,12 +2,16 @@
 - Add the image loader rule to achieve the same
 
 ```
-{
-    test: /.s[ac]ss$/,
-    use: [
-        { loader: "style-loader" },
-        { loader: "css-loader", options: { modules: true } },
-        { loader: "sass-loader"}
+module: {
+    rules: [
+        {
+            test: /.s[ac]ss$/,
+            use: [
+                { loader: "style-loader" },
+                { loader: "css-loader", options: { modules: true } },
+                { loader: "sass-loader"}
+            ]
+        }
     ]
 }
 ```

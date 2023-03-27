@@ -1,8 +1,12 @@
 ### Webpack confirguration for CSS Module:
 ```
-{
-    test: /.css$/,
-    use: ["style-loader", "css-loader"]
+module: {
+    rules: [
+        {
+            test: /.css$/,
+            use: ["style-loader", "css-loader"]
+        }
+    ]
 }
 ```
 ## Final Webpack after change:
@@ -16,12 +20,14 @@ module: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist")
     },
-    rules: [
-        {
-            test: /.css$/,
-            use: ["style-loader", "css-loader"]
-        }
-    ]
+    module: {
+        rules: [
+            {
+                test: /.css$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
+    }
 }
 ```
 

@@ -5,11 +5,15 @@ CSS Modules Reference: https://github.com/css-modules/css-modules
 
 ### Adding CSS Module configuration in CSS Loader for Webpack:
 ```
-{
-    test: /.css$/,
-    use: [
-        { loader: "style-loader" },
-        { loader: "css-loader", options: { modules: true } },
+module: {
+    rules: [
+        {
+            test: /.css$/,
+            use: [
+                { loader: "style-loader" },
+                { loader: "css-loader", options: { modules: true } },
+            ]
+        }
     ]
 }
 ```
