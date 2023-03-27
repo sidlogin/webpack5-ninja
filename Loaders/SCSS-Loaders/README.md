@@ -1,15 +1,18 @@
-# Webpack SASS Loaders
-In order use this first we should generate bundle.js using webpack command given below, we can achieve it with the help of any two below commands:
-- npm run build
-- npx webpack --config webpack.config.js --mode development 
-
-
-## Webpack Documentation:
-https://webpack.js.org/Loaders
-
-### Adding IMAGE Loader configuration for Webpack:
+### Adding SASS Loader configuration for Webpack:
 - Add the image loader rule to achieve the same
 
+```
+{
+    test: /.s[ac]ss$/,
+    use: [
+        { loader: "style-loader" },
+        { loader: "css-loader", options: { modules: true } },
+        { loader: "sass-loader"}
+    ]
+}
+```
+
+## Final Webpack after change:
 ```
 module.exports = {
     entry: "./src/index.js",

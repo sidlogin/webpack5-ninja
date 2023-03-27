@@ -3,6 +3,39 @@ CSS Module are very helpful if same classname has defined in different component
 
 CSS Modules Reference: https://github.com/css-modules/css-modules
 
+### Adding CSS Module configuration in CSS Loader for Webpack:
+```
+{
+    test: /.css$/,
+    use: [
+        { loader: "style-loader" },
+        { loader: "css-loader", options: { modules: true } },
+    ]
+}
+```
+## Final Webpack after change:
+```
+const path = require('path');
+
+module.exports = {
+    entry: "./src/index.js",
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    module: {
+        rules: [
+            {
+                test: /.css$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader", options: { modules: true } },
+                ]
+            }
+        ]
+    }
+};
+```
 ### Generated HTML before implementing CSS Module
 - install the style-loader and css-loader npm packages
 ```
@@ -35,30 +68,6 @@ CSS Modules Reference: https://github.com/css-modules/css-modules
         <script src="../dist/bundle.js"></script>
     </body>
 </html>
-```
-
-### Webpack confirguration for CSS Module:
-```
-const path = require('path');
-
-module.exports = {
-    entry: "./src/index.js",
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
-    },
-    module: {
-        rules: [
-            {
-                test: /.css$/,
-                use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader", options: { modules: true } },
-                ]
-            }
-        ]
-    }
-};
 ```
 
 ### Generated HTML after implementing CSS Module

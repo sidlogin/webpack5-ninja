@@ -10,6 +10,7 @@ Import lodash package in index.js and removed CDN lodash URL from index.html
 
 Created webpack.config.js file and added basic configuration to generate bundle.js in dist folder. Also replace the index.js with bundle.js in to index.html
 
+### Initial Webpack Confirguration:
 ```
 const path = require('path');
 
@@ -21,7 +22,8 @@ module.exports = {
     }
 }
 ```
-Webpack internally use Immediate Invoke Function and wrap all code inside it, with below code after page load it immediately invoke the function and look for the 'button1' element and attach click event to it.
+
+Webpack internally use Immediate Invoke Function and wrap all code inside it. The current code will be loaded by immediately invoke function and attach click event for 'button1' element .
 ```
 (() => {
     document.getElementById("button1").addEventListener("click", function () {
