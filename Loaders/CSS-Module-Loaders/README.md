@@ -4,6 +4,7 @@ CSS Module are very helpful if same classname has defined in different component
 CSS Modules Reference: https://github.com/css-modules/css-modules
 
 ### Generated HTML before implementing CSS Module
+- install the style-loader and css-loader npm packages
 ```
 <html lang="en">
     <head>

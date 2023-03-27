@@ -8,6 +8,8 @@ In order use this first we should generate bundle.js using webpack command given
 https://webpack.js.org/Loaders
 
 ### Loader configuration for Webpack:
+- install the style-loader and css-loader npm packages
+
 We can config multiple loaders under module attribute. For each loaders modules has rules property as below:
 
 - Rules can have multiple objects and it has two properties 'test' & 'use'.

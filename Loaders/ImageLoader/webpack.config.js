@@ -1,16 +1,5 @@
-# Webpack SASS Loaders
-In order use this first we should generate bundle.js using webpack command given below, we can achieve it with the help of any two below commands:
-- npm run build
-- npx webpack --config webpack.config.js --mode development 
+const path = require('path');
 
-
-## Webpack Documentation:
-https://webpack.js.org/Loaders
-
-### Adding SASS Loader configuration for Webpack:
-- install the sass-loader and sass npm packages
-
-```
 module.exports = {
     entry: "./src/index.js",
     output: {
@@ -33,8 +22,11 @@ module.exports = {
                     { loader: "css-loader", options: { modules: true } },
                     { loader: "sass-loader"}
                 ]
+            },
+            {
+                test: /.(jpg|jpeg|png|gif|svg)$/,
+                type: "asset/resource"
             }
         ]
     }
 };
-```
