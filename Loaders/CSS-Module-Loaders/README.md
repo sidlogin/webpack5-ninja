@@ -1,5 +1,7 @@
 # Webpack CSS Modules using Loaders
-CSS Module helps to segregating class wherever they are identifies uniquely.
+CSS Module are very helpful if same classname has defined in different components and overrides once it inserted on HTML page based on its precesence. CSS Modules help to segregating such classes so they are identified uniquely.
+
+CSS Modules Reference: https://github.com/css-modules/css-modules
 
 ```
 <html lang="en">
@@ -33,7 +35,30 @@ CSS Module helps to segregating class wherever they are identifies uniquely.
 </html>
 ```
 
-After adding module way:
+### Webpack confirguration:
+```
+module.exports = {
+    entry: "./src/index.js",
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    module: {
+        rules: [
+            {
+                test: /.css$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader", options: { modules: true } },
+                ]
+            }
+        ]
+    }
+};
+```
+
+
+### After adding CSS Module we get unique classes:
 
 ```
 <html lang="en"><head>
@@ -41,18 +66,21 @@ After adding module way:
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>#HCs2dRRKvIwDvm6nFtLh {
-    text-decoration: underline;
-    color:blue;
-}
+    <style>
+        #HCs2dRRKvIwDvm6nFtLh {
+            text-decoration: underline;
+            color:blue;
+        }
 
-.A4ZxUlvRrRRgz53hPnaA {
-    background: yellow;
-}</style><style>.PN5N69j7UFVq1KeSd7B8 {
-    background: red;
-  }
-  </style></head>
-
+        .A4ZxUlvRrRRgz53hPnaA {
+            background: yellow;
+        }
+    </style>
+    <style>.PN5N69j7UFVq1KeSd7B8 {
+        background: red;
+    }
+    </style>
+</head>
 <body>
     <h1 id="header">Hey this is my first webpack application !!</h1>
     <ul id="shoppingList"></ul>
