@@ -36,7 +36,7 @@ CSS Modules Reference: https://github.com/css-modules/css-modules
 </html>
 ```
 
-### Webpack confirguration:
+### Webpack confirguration for CSS Module:
 ```
 module.exports = {
     entry: "./src/index.js",
