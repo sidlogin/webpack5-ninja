@@ -76,9 +76,10 @@ module.exports = {
             background: yellow;
         }
     </style>
-    <style>.PN5N69j7UFVq1KeSd7B8 {
-        background: red;
-    }
+    <style>
+        .PN5N69j7UFVq1KeSd7B8 {
+            background: red;
+        }
     </style>
 </head>
 <body>
@@ -90,4 +91,24 @@ module.exports = {
 
 
 </body></html>
+```
+
+### Define and importing global CSS classes using CSS Module
+Global CSS can import and apply in any files
+
+```
+## Adding global CSS
+:global(.border) {
+    border: 2px solid #000;
+}
+
+## Importing global style
+import style from "./index.css";
+
+## Apply global css
+btn1.classList.add(["border"]);
+
+import style from  "./clearButton.css";
+el.classList.add([style.button]);
+
 ```
