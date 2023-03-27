@@ -16,8 +16,17 @@ We can config multiple loaders under module attribute. For each loaders modules 
 - 'test' attribute only accepts Regex (Regular Expression) .
 - 'use' accepts only loader definition in form of array . You can pass loaders like ["style-loader", "css-loader"]. Important point here to be noted is that, the order of loaders. whenever loaders will be executed then it will starts from right to left, so 'css-loader' will be executed first and then 'style-loader'.
 -  Behind the scene what CSS loader does? It helps of resolve CSS dependency in any JS file. Here whenever the index.js will be encoutered and it finds the import of index.css then it resolve this dependency. Once it loaded the dependency then it doesn't really know what to do with doing it, so it pass CSS data to the 'style-loader'. The 'style-loader' takes all the data processed by 'css-loader' and loads in to the html document. So it going to add a <style> tag in to <html> document and that how it works.
+
+### Webpack confirguration for CSS Module:
 ```
+const path = require('path');
+
 module: {
+    entry: "./src/index.js",
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
     rules: [
         {
             test: /.css$/,

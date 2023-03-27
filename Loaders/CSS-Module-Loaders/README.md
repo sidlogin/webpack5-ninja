@@ -39,6 +39,8 @@ CSS Modules Reference: https://github.com/css-modules/css-modules
 
 ### Webpack confirguration for CSS Module:
 ```
+const path = require('path');
+
 module.exports = {
     entry: "./src/index.js",
     output: {
