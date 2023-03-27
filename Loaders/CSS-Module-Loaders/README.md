@@ -3,8 +3,8 @@ CSS Module are very helpful if same classname has defined in different component
 
 CSS Modules Reference: https://github.com/css-modules/css-modules
 
-```
 ### Generated HTML before implementing CSS Module
+```
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -57,7 +57,6 @@ module.exports = {
     }
 };
 ```
-
 
 ### Generated HTML after implementing CSS Module
 
