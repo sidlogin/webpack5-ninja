@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebpakPlugin = require("html-webpack-plugin")
+const HtmlWebpakPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -9,6 +9,9 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
+  },
+  devServer: {
+    static: "./dist",
   },
   plugins: [
     new HtmlWebpakPlugin({
