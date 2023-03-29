@@ -1,5 +1,5 @@
 
-# Implementation of HTMLWwbpackplugin in Webpack.js.
+# Implementation of HTMLWebpackplugin in Webpack.js.
 - install the html-webpack-plugin npm  
 
 ## Basic Webpack:
