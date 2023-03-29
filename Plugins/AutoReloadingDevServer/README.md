@@ -33,6 +33,7 @@ plugins: [
 
 ```
 ### After adding plugin: 
+- Adding devServer object in Webpack file with target folder
 - To run webserver add following npm command in package.json "dev": "webpack serve --mode development --open",
 - **IMPORTANT Manually Added CSS and Assets in dist folder to fix broken html page**
 
